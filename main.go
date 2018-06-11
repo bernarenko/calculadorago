@@ -29,4 +29,37 @@ func main() {
 	} else {
 		fmt.Println("Você não passou. Recomendamos que faça o GC")
 	}
+
+	// começa grau C aqui
+
+	var soun int
+	fmt.Println("Você deseja fazer o grau C?")
+	fmt.Println("1 - Sim")
+	fmt.Println("2 - Não")
+	fmt.Scanln(&soun)
+	if soun == 2 {
+		if pregc >= 7 {
+			fmt.Println("Ok! Parabéns! Aproveite as feŕias!")
+		} else {
+			fmt.Println("Tente estudar mais de uma próxima vez.")
+		}
+	}
+
+	if soun == 1 {
+		var aoub int
+		fmt.Println("Qual nota vocẽ substituirá?")
+		fmt.Println("1 - Grau A")
+		fmt.Println("2 - Grau B")
+		fmt.Scanln(&aoub)
+		if aoub == 1 {
+			println("Você está substituindo o seu grau A")
+			println("Sua nota de trabalhos será substituida?")
+		}
+		if aoub == 2 {
+			println("Você está substituindo o seu grau B")
+			println("Sua nota de trabalhos será substituida?")
+		}
+
+	}
+
 }
