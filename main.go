@@ -1,11 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var tga float32
 	var pga float32
-
 	fmt.Println("Vamos calcular suas notas Unisinos")
 	fmt.Println("Insira nota da sua prova do grau A:")
 	fmt.Scanln(&tga)
@@ -52,14 +53,31 @@ func main() {
 		fmt.Println("2 - Grau B")
 		fmt.Scanln(&aoub)
 		if aoub == 1 {
-			println("Você está substituindo o seu grau A")
-			println("Sua nota de trabalhos será substituida?")
+			var nts int
+			fmt.Println("Você está substituindo o seu grau A")
+			fmt.Println("Sua nota de trabalhos será substituida?")
+			fmt.Scanln(&nts)
 		}
 		if aoub == 2 {
-			println("Você está substituindo o seu grau B")
-			println("Sua nota de trabalhos será substituida?")
+			var nts int
+			fmt.Println("Você está substituindo o seu grau B")
+			fmt.Println("Sua nota de trabalhos será substituida?")
+			fmt.Println("1 - Sim")
+			fmt.Println("2 - Não")
+			fmt.Scanln(&nts)
+			if nts == 2 {
+				var pgc float32
+
+				fmt.Println("Insira sua nota de prova do grau B")
+				fmt.Scanln(&pgc)
+				var posgc float32 = ((cga * 3.33) + (pgc * 6.67)) / 10
+
+				if posgc >= 7 {
+					fmt.Println("Você passou. Parabéns!")
+				} else {
+					fmt.Println("Você reprovou. Tente outra vez.")
+				}
+			}
 		}
-
 	}
-
 }
