@@ -7,13 +7,11 @@ import (
 func main() {
 	var tga float32
 	var pga float32
-	fmt.Println("Vamos calcular suas notas Unisinos")
-	fmt.Println("Insira nota da sua prova do grau A:")
-	fmt.Scanln(&tga)
-	fmt.Println("Insira nota do seu trabalho do grau A:")
-	fmt.Scanln(&pga)
-	var cga float32 = (((tga * 3) + (pga * 7)) / 10) // resultado do grau A.
+	mensagemInicial()
+	calculoGA(tga, pga)
 
+	var cga float32 = (((tga * 3) + (pga * 7)) / 10) // resultado do grau A.
+	fmt.Println(cga)
 	var tgb float32
 	var pgb float32
 
