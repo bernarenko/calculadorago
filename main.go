@@ -5,23 +5,19 @@ import (
 )
 
 func main() {
+	var pga float32 // grau A
 	var tga float32
-	var pga float32
+	var pgb float32 // grau B
+	var tgb float32
 	mensagemInicial()
-	calculoGA(tga, pga)
+	pga, tga = calculoGA(pga, tga)
+	pgb, tgb = calculoGB(pgb, tgb)
 
 	var cga float32 = (((tga * 3) + (pga * 7)) / 10) // resultado do grau A.
-	fmt.Println(cga)
-	var tgb float32
-	var pgb float32
-
-	fmt.Println("Insira nota da sua prova do grau B:")
-	fmt.Scanln(&tgb)
-	fmt.Println("Insira nota do seu trabalho do grau B:")
-	fmt.Scanln(&pgb)
-	var cgb float32 = (((tgb * 3) + (pgb * 7)) / 10)
-
+	var cgb float32 = (((tgb * 3) + (pgb * 7)) / 10) // resultado do grau B.
 	var pregc float32 = ((cga * 3.33) + (cgb * 6.67)) / 10
+
+	mensagemNotaDeGrau(cga, cgb)
 
 	if pregc >= 7 {
 		fmt.Println("Você passou. Não recomendamos que faça o GC")
