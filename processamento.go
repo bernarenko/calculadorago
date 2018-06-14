@@ -6,7 +6,7 @@ func calculoDeGrau(tgx, pgx float32) (cdg float32) {
 	return resultadoDeGrau
 }
 
-func CalculoPreGC(cga, cgb float32) (pregc float32) {
+func calculoGC(cga, cgb float32) (pregc float32) {
 	var resultado float32 = ((cga * 3.33) + (cgb * 6.67)) / 10
 
 	return resultado

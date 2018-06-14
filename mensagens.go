@@ -23,12 +23,10 @@ func mensagemResultadoPreGC(pregc float32) {
 	}
 }
 
-func naoSubstituirGC(soun int, pregc float32) {
-	if soun == 2 {
-		if pregc >= 7 {
-			fmt.Println("Ok! Parabéns! Aproveite as feŕias!")
-		} else {
-			fmt.Println("Tente estudar mais de uma próxima vez.")
-		}
+func mensagemNaoSubstituirGC(pregc float32) {
+	if pregc >= 7 {
+		fmt.Println("Ok! Parabéns! Aproveite as feŕias!")
+	} else {
+		fmt.Println("Tente estudar mais de uma próxima vez.")
 	}
 }
