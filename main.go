@@ -20,12 +20,7 @@ func main() {
 	var pregc float32 = CalculoPreGC(cga, cgb)
 
 	mensagemNotaDeGrau(cga, cgb)
-
-	if pregc >= 7 {
-		fmt.Println("Você passou. Não recomendamos que faça o GC")
-	} else {
-		fmt.Println("Você não passou. Recomendamos que faça o GC")
-	}
+	mensagemResultadoPreGC(pregc)
 
 	// começa grau C aqui
 

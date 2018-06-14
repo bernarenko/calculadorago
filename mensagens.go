@@ -14,3 +14,11 @@ func mensagemNotaDeGrau(cga, cgb float32) {
 	fmt.Printf("Essas foram suas notas\n\n\n")
 
 }
+
+func mensagemResultadoPreGC(pregc float32) {
+	if pregc >= 7 {
+		fmt.Println("Você passou. Não recomendamos que faça o GC")
+	} else {
+		fmt.Println("Você não passou. Recomendamos que faça o GC")
+	}
+}
