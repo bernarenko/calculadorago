@@ -9,8 +9,8 @@ func mensagemInicial() {
 }
 
 func mensagemNotaDeGrau(cga, cgb float32) {
-	fmt.Println("\nResultado cga:", cga)
-	fmt.Println("Resultado cgb:", cgb)
+	fmt.Println("\nResultado do Grau A:", cga)
+	fmt.Println("Resultado do Grau B:", cgb)
 	fmt.Printf("Essas foram suas notas\n\n\n")
 
 }

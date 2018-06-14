@@ -10,12 +10,14 @@ func main() {
 	var pgb float32 // grau B
 	var tgb float32
 	mensagemInicial()
+	// Inputs de dados de provas(pgx) e trabalhos(tgx).
 	pga, tga = inputGA(pga, tga)
 	pgb, tgb = inputGB(pgb, tgb)
 
-	var cga float32 = (((tga * 3) + (pga * 7)) / 10) // resultado do grau A.
-	var cgb float32 = (((tgb * 3) + (pgb * 7)) / 10) // resultado do grau B.
-	var pregc float32 = ((cga * 3.33) + (cgb * 6.67)) / 10
+	// Processamento de dados || cga = Grau A / cgb = Grau B || pregc = Calculo da Nota final, pré GC.
+	var cga float32 = calculoDeGrau(tga, pga)
+	var cgb float32 = calculoDeGrau(tgb, pgb)
+	var pregc float32 = CalculoPreGC(cga, cgb)
 
 	mensagemNotaDeGrau(cga, cgb)
 
