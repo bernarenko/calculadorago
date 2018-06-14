@@ -24,18 +24,9 @@ func main() {
 
 	// começa grau C aqui
 
-	var soun int
-	fmt.Println("Você deseja fazer o grau C?")
-	fmt.Println("1 - Sim")
-	fmt.Println("2 - Não")
-	fmt.Scanln(&soun)
-	if soun == 2 {
-		if pregc >= 7 {
-			fmt.Println("Ok! Parabéns! Aproveite as feŕias!")
-		} else {
-			fmt.Println("Tente estudar mais de uma próxima vez.")
-		}
-	}
+	var soun int // inteiro para salvar opção de substituir ou não o grau C
+	soun = inputQuerSubstituir(soun)
+	naoSubstituirGC(soun, pregc)
 
 	if soun == 1 {
 		var aoub int
