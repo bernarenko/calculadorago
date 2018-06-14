@@ -10,8 +10,8 @@ func main() {
 	var pgb float32 // grau B
 	var tgb float32
 	mensagemInicial()
-	pga, tga = calculoGA(pga, tga)
-	pgb, tgb = calculoGB(pgb, tgb)
+	pga, tga = inputGA(pga, tga)
+	pgb, tgb = inputGB(pgb, tgb)
 
 	var cga float32 = (((tga * 3) + (pga * 7)) / 10) // resultado do grau A.
 	var cgb float32 = (((tgb * 3) + (pgb * 7)) / 10) // resultado do grau B.
