@@ -17,12 +17,3 @@ func inputGB(p1, p2 float32) (pgb, tgb float32) {
 	fmt.Scanln(&p2)
 	return p1, p2
 }
-
-func inputQuerSubstituir(p1 int) (soun int) {
-	fmt.Println("Você deseja fazer o grau C?")
-	fmt.Println("1 - Sim")
-	fmt.Println("2 - Não")
-	fmt.Scanln(&p1)
-
-	return p1
-}
