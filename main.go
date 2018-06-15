@@ -39,6 +39,16 @@ func main() {
 		aoub = inputSubsAouB(aoub)              // escolhendo Qual será substituido.
 		nts = inputSubstituindoNotas(aoub, nts) // escolhendo se nota será substituida
 
+		if aoub == 1 { // Substituindo grau A //
+			pgc = inputProvaGC(pgc)
+			var posgc float32 = calculoGC(pgc, cgb)
+
+			if posgc >= 7 {
+				fmt.Println("Você passou. Parabéns!")
+			} else {
+				fmt.Println("Você reprovou. Tente outra vez.")
+			}
+		}
 		if aoub == 2 { // Substituindo grau B //
 			if nts == 2 {
 				pgc = inputProvaGC(pgc)
@@ -49,17 +59,6 @@ func main() {
 				} else {
 					fmt.Println("Você reprovou. Tente outra vez.")
 				}
-			}
-		}
-		if aoub == 1 { // Substituindo grau A //
-			println("if do grau A")
-			pgc = inputProvaGC(pgc)
-			var posgc float32 = calculoGC(pgc, cgb)
-
-			if posgc >= 7 {
-				fmt.Println("Você passou. Parabéns!")
-			} else {
-				fmt.Println("Você reprovou. Tente outra vez.")
 			}
 		}
 	}
