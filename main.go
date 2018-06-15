@@ -5,14 +5,11 @@ import (
 )
 
 func main() {
-	var pga float32 // grau A
-	var tga float32
-	var pgb float32 // grau B
-	var tgb float32
-	var soun int // inteiro para salvar opção de substituir ou não o grau C
-	var aoub int // inteiro para salvar opção de qual será substituido
-	var nts int  // inteiro para salvar opção de substituição || 1 - A, 2 -B
+	var pga, tga float32 // grau A
+	var pgb, tgb float32 // grau B
+	var cga, cgb, pregc float32
 	var pgc float32
+	var soun, aoub, nts int // Substituir GC || Qual substituir || Substituir notas
 	var posgc float32
 	var graucnotas float32
 
@@ -22,9 +19,9 @@ func main() {
 	pgb, tgb = inputGB(pgb, tgb)
 
 	// Processamento de dados || cga = Grau A / cgb = Grau B || pregc = Calculo da Nota final, pré GC.
-	var cga float32 = calculoDeGrau(tga, pga)
-	var cgb float32 = calculoDeGrau(tgb, pgb)
-	var pregc float32 = calculoGC(cga, cgb)
+	cga = calculoDeGrau(tga, pga)
+	cgb = calculoDeGrau(tgb, pgb)
+	pregc = calculoGC(cga, cgb)
 
 	mensagemNotaDeGrau(cga, cgb)
 	mensagemResultadoPreGC(pregc)
