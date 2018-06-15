@@ -14,6 +14,7 @@ func main() {
 	var nts int  // inteiro para salvar opção de substituição || 1 - A, 2 -B
 	var pgc float32
 	var posgc float32
+	var graucnotas float32
 
 	mensagemInicial()
 	// Inputs de dados de provas(pgx) e trabalhos(tgx).
@@ -49,6 +50,16 @@ func main() {
 					fmt.Println("Você reprovou. Tente outra vez.")
 				}
 			}
+			if nts == 2 {
+				pgc = inputProvaGC(pgc)
+				graucnotas = calculoDeGrau(tga, pgc)
+				posgc = calculoGC(graucnotas, cgb)
+				if posgc >= 7 {
+					fmt.Println("Você passou. Parabéns!")
+				} else {
+					fmt.Println("Você reprovou. Tente outra vez.")
+				}
+			}
 		}
 
 		if aoub == 2 { // Substituindo grau B //
@@ -64,7 +75,14 @@ func main() {
 			}
 
 			if nts == 2 {
-				fmt.Println("Não substituir nota")
+				pgc = inputProvaGC(pgc)
+				graucnotas = calculoDeGrau(tgb, pgc)
+				posgc = calculoGC(cga, graucnotas)
+				if posgc >= 7 {
+					fmt.Println("Você passou. Parabéns!")
+				} else {
+					fmt.Println("Você reprovou. Tente outra vez.")
+				}
 			}
 		}
 	}
